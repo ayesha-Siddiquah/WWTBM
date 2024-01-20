@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Game</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+</head>
+<body>
+ 
+  <header class="text-center mt-3">
+    <div class="container">
+      <div class="row">
+          <div class="left-buttons">   
+          <button id="backButton" class="btn btn-secondary">Back</button>
+          <button id="playPauseButton" class="btn btn-secondary">⏵︎</button>
+        </div>
+        <div class="col-md-8 text-right">
+          <button id="reset-game-button" class="btn btn-secondary">Reset</button>
+          <button id="quit-game-button" class="btn btn-secondary">Quit</button>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+    <div class="scoreboard-timer">
+      <div id="player-name">PlayerName:</div>
+      <div id="timer">00:30</div>
+      <div id="scoreboard">Score: <span id="score">0</span></div>
+      <div id="wrong">Wrong: <span id="wrong-counter">0</span></div>
+      <div id="life-lines">Life-linesUsed: <span id="lifeline-counter">0</span></div>
+    </div>
+  </div>
+  </div>
+
+  <main>
+    <div class="row">
+      <!-- Lifeline Section -->
+      <div class="col-md-3" id="lifelineSection">
+       <h3 id= 'h3-lifeline'>LIFE-LINES</h3>
+        <button id= "fiftyButton" class="lifeline-btn">50:50</button></br>
+        <button id= "stopTimerButton"class="lifeline-btn">Stop-timer</button>       
+      </div>
+
+  <div id="mainContent">
+    <audio id="timer-sound" loop>
+      <source src="images/Tic-tic.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <audio id="gameWinner" loop>
+      <source src="images/gameWinner.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <audio id="gameOver" loop>
+      <source src="images/gameOver.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+
+    <div id="containers">
+      <p id="question"></p>
+      <div id="userInputContainer">
+          <div id="userInput">
+      </div>
+      </div>
+      
+      <div id="keyboard"></div>
+    </div>
+    <div class="start-submit">
+      <button id="startButton" type="button">Start</button>
+      <button id="submitButton">Submit</button>
+    </div>
+      
+
+    
+<div class="modal" id="nameModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <p id="msg-or-end">Please input your name before proceeding.</p>
+    <div class="modal-buttons">
+      <button id="end-game-yes">Yes</button>
+      <button id="end-game-no">No</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="submitModal">
+  <div class="modal-content">
+      <span class="close-submit-btn">&times;</span>
+      <p id="submit-msg"></p>
+      <div class="submit-modal-buttons">
+          <button id="play-again-btn">Play Again</button>
+          <button id="submit-ok-btn">OK</button>
+      </div>
+  </div>
+</div>
+
+ <div class="modal" id="submitModal">
+  <div class="modal-content">
+      <span class="close-submit-btn">&times;</span>
+      <p id="submit-msg"></p>
+      <div class="submit-modal-buttons">
+          <button id="submit-ok-btn">OK</button>
+      </div>
+      <div id="extra-buttons-div" style="display: none;">
+          <button id="play-again-btn">Play Again</button>
+         
+      </div>
+  </div>
+</div> 
+
+
+<div id="celebration" class="celebration">
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div>
+  <div class="ribbon"></div> 
+</div>       
+</main> 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
+
+</body>
+</html>
